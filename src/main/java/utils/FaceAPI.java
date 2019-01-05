@@ -77,11 +77,11 @@ public class FaceAPI {
                 = HttpClientBuilder.create().build().execute(request);
         HttpEntity responseBody = response.getEntity();
         DetectModel detect = null;
+        String jsonString = null;
 
         //проверка статуса ответа и сбор объекта DetectModel
         if (response.getStatusLine().getStatusCode() == 200
-                && responseBody != null && EntityUtils.toString(responseBody).trim().length() > 2) {
-            String jsonString = EntityUtils.toString(responseBody).trim();
+                && responseBody != null && (jsonString = EntityUtils.toString(responseBody).trim()).length() > 2) {
 
             JsonParser jsonParser = new JsonParser();
             JsonArray jsonRes = (JsonArray)jsonParser.parse(jsonString);
