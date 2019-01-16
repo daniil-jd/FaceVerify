@@ -33,7 +33,7 @@ public class FaceAPI {
      * Ключ подписки.
      */
     private static final String SUBSCRIPTION_KEY
-            = "1f1934d0c5d043c3a213fc8b1707d885";
+            = "30f239c34bba4af8bb0205fa5bd1caa8";
 
     /**
      * URL для получения информации о лице по фото.
